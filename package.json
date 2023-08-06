@@ -6,10 +6,10 @@
   "author": "tim.miller@preparesoftware.com",
   "license": "GPLv3",
   "dependencies": {
-    "prisma": "~3.12.0"
+    "prisma": "~5.1.1"
   },
   "scripts": {
-    "docker-build": "docker build -t timothyjmiller/prisma-studio:latest .",
+    "docker-build": "docker build -t jiveoff/prisma-studio:latest .",
     "update-dependencies": "pnpm up --latest"
   },
   "private": true
