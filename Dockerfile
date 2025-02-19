@@ -1,5 +1,5 @@
 # ---- Base Node ----
-FROM node:16-bullseye AS base
+FROM node:20-bullseye AS base
 RUN apt-get update
 RUN apt-get install openssl
 LABEL image=timothyjmiller/prisma-studio:latest \
@@ -22,4 +22,4 @@ COPY --from=dependencies /node_modules ./node_modules
 COPY prisma-introspect.sh .
 RUN chmod +x prisma-introspect.sh
 EXPOSE $PRISMA_STUDIO_PORT
-ENTRYPOINT ["/bin/sh", "prisma-introspect.sh"]
+ENTRYPOINT ["/bin/bash", "prisma-introspect.sh"]
