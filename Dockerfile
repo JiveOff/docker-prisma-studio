@@ -22,4 +22,4 @@ COPY prisma-introspect.sh .
 RUN chmod +x prisma-introspect.sh
 
 EXPOSE $PRISMA_STUDIO_PORT
-ENTRYPOINT ["/bin/bash", "prisma-introspect.sh"]
+ENTRYPOINT ["/bin/sh", "prisma-introspect.sh"]
